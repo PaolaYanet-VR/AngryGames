@@ -1,10 +1,10 @@
 import './App.css';
-import GameItem from './components/GameList/GameItem';
+import GameList from './components/GameList/GamesList';
 
 function App() {
   return (
     <div className="App">
-      <GameItem />
+      <GameList />
     </div>
   );
 }
