@@ -1,7 +1,7 @@
 import React from 'react';
 import Item from './GameItem';
 import ConsultGamesRequest from '../../requests/ConsultGamesRequest';
-import { ListGroup, CardDeck } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 export default function GamesList() {
     const request = new ConsultGamesRequest();
@@ -10,10 +10,8 @@ export default function GamesList() {
     const items = games.map(game => <Item key={game.id} game={game} />);
 
     return(
-        <div>
-            <CardDeck>
-                {items}
-            </CardDeck>
-        </div>
+        <Row>
+            {items}
+        </Row>
     );
 }
