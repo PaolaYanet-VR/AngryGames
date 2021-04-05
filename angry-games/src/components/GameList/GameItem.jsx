@@ -1,14 +1,13 @@
 import react from 'react';
 import { ListGroup } from 'react-bootstrap';
 
-function GameItem(props){
+export default function GameItem(props){
     const game = props.game;
 
     return (
         <ListGroup.Item>
-            {game.title}
+           <label>hola</label>
         </ListGroup.Item>
     );
 }
 
-export default GameItem;
