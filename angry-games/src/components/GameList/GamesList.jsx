@@ -1,7 +1,7 @@
 import React from 'react';
 import Item from './GameItem';
 import ConsultGamesRequest from '../../requests/ConsultGamesRequest';
-import { ListGroup } from 'react-bootstrap';
+import { ListGroup, CardDeck } from 'react-bootstrap';
 
 export default function GamesList() {
     const request = new ConsultGamesRequest();
@@ -11,9 +11,9 @@ export default function GamesList() {
 
     return(
         <div>
-            <ListGroup>
+            <CardDeck>
                 {items}
-            </ListGroup>
+            </CardDeck>
         </div>
     );
 }
