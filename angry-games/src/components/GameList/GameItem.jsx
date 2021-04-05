@@ -6,7 +6,7 @@ export default function GameItem(props){
 
     return (
         <ListGroup.Item>
-           <label>hola</label>
+           <label> {game.id} {game.title} </label>
         </ListGroup.Item>
     );
 }
