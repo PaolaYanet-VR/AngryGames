@@ -1,0 +1,10 @@
+.item {
+    background-color: rgb(35, 20, 53);
+    border-radius: 10pt;
+    color: white;
+    padding: 15pt;
+}
+
+.gameImg {
+    border-radius: 5pt;
+}
