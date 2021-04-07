@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Input Adapter", "1. Input Adapter", "{53C6FA47-7BA9-4A60-924D-5F2ADEA2EBE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Application Service", "2. Application Service", "{C4D053A9-98CA-4C42-8FEE-38FAE4E3BCF1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Domain Model", "3. Domain Model", "{E58CE036-C38F-49E3-9F29-5BF895AE22BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Output Adapter", "4. Output Adapter", "{51E57654-FE08-4C3F-9B1E-9BEBFD30781C}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "angry-games", "..\angry-games\", "{A90FF895-A982-49D8-BC02-EE3EA24ECC01}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52070"
+		Debug.AspNetCompiler.PhysicalPath = "..\angry-games\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52070\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52070"
+		Release.AspNetCompiler.PhysicalPath = "..\angry-games\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52070\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52070"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A90FF895-A982-49D8-BC02-EE3EA24ECC01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A90FF895-A982-49D8-BC02-EE3EA24ECC01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A90FF895-A982-49D8-BC02-EE3EA24ECC01} = {53C6FA47-7BA9-4A60-924D-5F2ADEA2EBE0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E68608D5-CD8A-4D2D-8FA1-84AD054E731E}
+	EndGlobalSection
+EndGlobal
