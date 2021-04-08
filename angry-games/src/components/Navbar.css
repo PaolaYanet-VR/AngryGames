@@ -7,4 +7,5 @@
     padding: 15pt;
     background-color: rgb(35, 20, 53);
     margin-bottom: 10px;
+    position: fixed;
 }
