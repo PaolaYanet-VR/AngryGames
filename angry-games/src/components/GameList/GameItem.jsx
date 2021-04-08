@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
-import '../GameList.css';
+import './GameList.css';
 
 export default function GameItem(props){
     const game = props.game;
