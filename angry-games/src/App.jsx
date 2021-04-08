@@ -7,8 +7,8 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Carousel />
       <div className="App">
+        <Carousel />
         <GameList />        
       </div>
     </div>
