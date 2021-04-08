@@ -1,7 +1,7 @@
 import './App.css';
 import GameList from './components/GameList/GamesList';
 import Navbar from './components/Navbar';
-import Carousel from './components/CarouselHome';
+import Carousel from './components/GameList/CarouselHome';
 
 function App() {
   return (
