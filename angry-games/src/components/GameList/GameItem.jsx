@@ -9,7 +9,9 @@ export default function GameItem(props){
         <Col>
             <Card className="item">
                 <Card.Body>
-                    <img className="gameImg" height="100 rem" width="auto" src="https://i.stack.imgur.com/y9DpT.jpg"/>
+                    <div className= "alinea"><img className="gameImg" height="120 rem" width="160 rem"  src={game.image}/>
+                    
+                     </div>
                     <Card.Title>{game.title}</Card.Title>
                     <Card.Text>
                     {game.description}
