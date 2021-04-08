@@ -15,8 +15,8 @@ import {
           <TopNavbar />
           <div className="Catalogo">
             <Switch>
-              <Route path="/games" component={GamesPage} />
-              <Redirect exact path="/" to="/games" />
+              <Route path="/home" component={GamesPage} />
+              <Redirect exact path="/" to="/home" />
             </Switch>
           </div>
         </BrowserRouter>

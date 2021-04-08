@@ -6,8 +6,8 @@ export default function NavGames() {
     return(
         <Navbar className="Nav">
             <Navbar.Brand className="Menu" href="#home">Angry Games</Navbar.Brand>
-            <Nav.Link className="link" href="#home">Catálogo</Nav.Link>
-            <Nav.Link className="link" href="#link">Agregar</Nav.Link>
+            <Nav.Link className="link" href="#home">Home</Nav.Link>
+            <Nav.Link className="link" href="#link">Add Game</Nav.Link>
         </Navbar>
     );
 }
