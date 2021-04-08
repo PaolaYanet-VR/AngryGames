@@ -20,3 +20,8 @@
 .link::placeholder {
     color: rgb(255, 255, 255);
 }
+
+.logo {
+    width: 50px;
+    margin-right: 15px;
+}
