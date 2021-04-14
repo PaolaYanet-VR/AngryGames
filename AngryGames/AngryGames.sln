@@ -34,6 +34,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "angry-games", "..\angry-gam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngryGames.Api", "AngryGames.Api\AngryGames.Api.csproj", "{F2E115D5-C5FA-4AE3-B91C-028DD14D0EFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngryGames.OutputAdapter", "AngryGames.OutputAdapter\AngryGames.OutputAdapter.csproj", "{B1CA83F6-0C05-4A90-9B0E-AED52AD3A55D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{F2E115D5-C5FA-4AE3-B91C-028DD14D0EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2E115D5-C5FA-4AE3-B91C-028DD14D0EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2E115D5-C5FA-4AE3-B91C-028DD14D0EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1CA83F6-0C05-4A90-9B0E-AED52AD3A55D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1CA83F6-0C05-4A90-9B0E-AED52AD3A55D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1CA83F6-0C05-4A90-9B0E-AED52AD3A55D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1CA83F6-0C05-4A90-9B0E-AED52AD3A55D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A90FF895-A982-49D8-BC02-EE3EA24ECC01} = {53C6FA47-7BA9-4A60-924D-5F2ADEA2EBE0}
 		{F2E115D5-C5FA-4AE3-B91C-028DD14D0EFE} = {C4D053A9-98CA-4C42-8FEE-38FAE4E3BCF1}
+		{B1CA83F6-0C05-4A90-9B0E-AED52AD3A55D} = {51E57654-FE08-4C3F-9B1E-9BEBFD30781C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E68608D5-CD8A-4D2D-8FA1-84AD054E731E}
