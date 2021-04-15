@@ -1,0 +1,19 @@
+.ButtonAdd {
+    background-color: rgb(212, 63, 63);
+    border: transparent;
+}
+
+.ButtonAdd:hover {
+    background-color: rgb(153, 47, 47);
+    border: transparent;
+}
+
+.Input-txt {
+    background-color: rgb(30, 19, 44);
+    border: transparent;
+}
+
+.Input-txt:active, .Input-txt::selection {
+    background-color: rgb(40, 25, 59);
+    border: transparent;
+}
