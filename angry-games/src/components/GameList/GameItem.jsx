@@ -8,7 +8,9 @@ export default function GameItem(props){
     return (
         <Col>
             <Card className="item">
-                <Card.Body>
+            <a href={game.id} >
+            <Card.Body>
+                    
                     <div className= "alinea"><img className="gameImg" height="120 rem" width="160 rem"  src={game.image}/>
                     
                      </div>
@@ -16,7 +18,9 @@ export default function GameItem(props){
                     <Card.Text>
                     {game.description}
                     </Card.Text>
-                </Card.Body>
+                </Card.Body>       
+            </a>
+                
             </Card>
             <br />
         </Col>
