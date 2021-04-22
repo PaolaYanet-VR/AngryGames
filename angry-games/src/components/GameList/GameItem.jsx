@@ -5,10 +5,12 @@ import './GameList.css';
 export default function GameItem(props){
     const game = props.game;
 
+    const GameDetail = '../GameDetail/' + game.id;
+
     return (
         <Col>
             <Card className="item">
-            <a href={game.id} >
+            <a href={ GameDetail } >
             <Card.Body>
                     
                     <div className= "alinea"><img className="gameImg" height="120 rem" width="160 rem"  src={game.image}/>

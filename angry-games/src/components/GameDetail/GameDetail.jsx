@@ -1,18 +1,23 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import ConsultGamesRequest from '../../requests/ConsultGamesRequest';
 
-export default function GameDetail(props){
-    const game = props.game;
+export default function GameDetail(){
+    var URLactual = window.location.href;
+
+    var id = URLactual.split("http://localhost:3000/GameDetail/");
+    const request = new ConsultGamesRequest();
+    const games = request.execute();
+
+    var gameSelected;
+
+    games.forEach(element => {
+        if(element.id == id){
+            gameSelected = element;
+        }
+    });
+
     return(
         <div>
-            <Button>Go back</Button>
-            <h1>{game.title}</h1>
-            <br/>
-            <img height="120 rem" width="160 rem"  src={game.image}/>
-            <label>{game.category}</label>
-            <label>{game.description}</label>
-            <label>{game.developer}</label>
-            <label>{game.releaseDate}</label>
         </div>
     );
 }
