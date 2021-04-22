@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import './Navbar.css';
-import logo from '../../img/LogoPre.png';
+import logo from '../../img/Logov2.png';
 
 export default function NavGames() {
     return(
