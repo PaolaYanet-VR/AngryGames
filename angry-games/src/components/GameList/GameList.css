@@ -28,11 +28,10 @@ a{
     color: white;
     border-radius: .5rem;
     width: auto;
-}
-
-.button-modify{
-    background-color:#7C0032;
-    color: white;
-    border-radius: .5rem;
-    width: auto;
+    margin-bottom: 5%;
+    width: 30%;
+    border: 0px;
+    padding: 10px;
+    height: 100%;
+    float: right;
 }

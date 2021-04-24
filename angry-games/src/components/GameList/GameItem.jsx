@@ -4,7 +4,7 @@ import './GameList.css';
 
 export default function GameItem(props){
     const game = props.game;
-
+    
     const GameDetail = '../GameDetail/' + game.id;
 
     return (
@@ -25,7 +25,6 @@ export default function GameItem(props){
                     </Card.Text>
                     <Col>
                         <button className="button-delete">Delete</button>
-                        <button className="button-modify">Modify</button>
                     </Col>
                 </Card.Body>       
             </a>
