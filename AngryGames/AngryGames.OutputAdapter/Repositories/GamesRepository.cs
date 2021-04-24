@@ -1,12 +1,22 @@
-﻿using System;
+﻿using AngryGames.DomainModel.Entities;
+using Dapper;
+using MySql.Data.MySqlClient;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
+using System.Data;
 
 namespace AngryGames.OutputAdapter.Repositories
 {
-    class GamesRepository
+    public static class GamesRepository
     {
+        public static readonly string ConnectionString = ConfigurationManager.ConnectionStrings["angry_games"].ToString();
+
+        public static List<Game> ConsultarAlumnos()
+        {
+            using (var connection = new MySqlConnection(ConnectionString))
+            {
+                return connection.Query<Game>("get_all_games", commandType: CommandType.StoredProcedure).AsList();
+            }
+        }
     }
 }
