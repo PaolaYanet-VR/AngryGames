@@ -1,8 +1,14 @@
 .item {
     background-color: rgb(35, 20, 53);
-    border-radius: 10pt;
+    border-radius: 5pt;
     color: white;
-    padding: 15pt;
+    padding: 5pt;
+    width: 22rem;
+}
+
+.item-a:hover{
+    text-decoration: none;
+    color: white;
 }
 
 .gameImg {
@@ -14,4 +20,19 @@
 }
 a{
   color: white;
+}
+
+.button-delete{
+    border-color: #7C0032;
+    background-color:#7C0032;
+    color: white;
+    border-radius: .5rem;
+    width: auto;
+}
+
+.button-modify{
+    background-color:#7C0032;
+    color: white;
+    border-radius: .5rem;
+    width: auto;
 }
