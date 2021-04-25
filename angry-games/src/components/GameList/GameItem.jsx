@@ -6,13 +6,19 @@ import iconDelete from '../../img/delete.png';
 export default function GameItem(props){
     const game = props.game;
     
-    const GameDetail = '../GameDetail/' + game.id;
+    const [selectedGame, setSelectedGame] = React.useState('');
+
+    function handleSelectedGameChange(event){
+        const value = event.target.value;
+        setSelectedGame(event.target.value);
+        console.log(selectedGame);
+    }
 
     return (
         <Col>
             <Card className="item">
             
-            <Nav.Link className="link" href="gameDetail">    
+            <Nav.Link className="link" value={game.id} onClick={handleSelectedGameChange}>    
             <Card.Body>
                     
                     <div className= "alinea"><img className="gameImg" height="120 rem" width="160 rem"  src={game.image}/>
