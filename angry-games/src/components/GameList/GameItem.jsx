@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 import './GameList.css';
+import logo from '../../img/delete.png';
 
 export default function GameItem(props){
     const game = props.game;
@@ -24,9 +25,9 @@ export default function GameItem(props){
                     Release date: {game.releaseDate}
                     </Card.Text>
                     <Col>
-                        <input type="image" src="../../img/delete.png" name="submit" width="100" height="48" alt="submit"/>
+                        <input className="button-delete" type="image" src={logo} name="delete" alt="delete"/>
                     </Col>
-                </Card.Body>       
+                </Card.Body>
             </a>
                 
             </Card>
