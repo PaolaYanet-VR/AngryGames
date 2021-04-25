@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
 import './GameList.css';
-import logo from '../../img/delete.png';
+import iconDelete from '../../img/delete.png';
 
 export default function GameItem(props){
     const game = props.game;
@@ -25,7 +25,7 @@ export default function GameItem(props){
                     Release date: {game.releaseDate}
                     </Card.Text>
                     <Col>
-                        <input className="button-delete" type="image" src={logo} name="delete" alt="delete"/>
+                        <button className="button-delete"><img width="25px" src={iconDelete}/></button>
                     </Col>
                 </Card.Body>
             </a>
