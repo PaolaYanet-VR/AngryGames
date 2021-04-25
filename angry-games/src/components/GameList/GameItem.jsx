@@ -24,7 +24,7 @@ export default function GameItem(props){
                     Release date: {game.releaseDate}
                     </Card.Text>
                     <Col>
-                        <button className="button-delete">Delete</button>
+                        <input type="image" src="../../img/delete.png" name="submit" width="100" height="48" alt="submit"/>
                     </Col>
                 </Card.Body>       
             </a>
