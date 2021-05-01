@@ -10,7 +10,7 @@ export default function GameItem(props){
 
     function handleSelectedGameChange(event){
         const value = event.target.value;
-        setSelectedGame(event.target.value);
+        setSelectedGame(value);
         console.log(selectedGame);
     }
 
@@ -18,7 +18,7 @@ export default function GameItem(props){
         <Col>
             <Card className="item">
             
-            <Nav.Link className="link" value={game.id} onClick={handleSelectedGameChange}>    
+            <Nav.Link className="link"  href="gameDetail" value={game.id} onClick={handleSelectedGameChange}>    
             <Card.Body>
                     
                     <div className= "alinea"><img className="gameImg" height="120 rem" width="160 rem"  src={game.image}/>
