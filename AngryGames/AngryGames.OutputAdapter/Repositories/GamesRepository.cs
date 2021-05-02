@@ -4,6 +4,7 @@ using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Linq;
 
 namespace AngryGames.OutputAdapter.Repositories
 {
@@ -11,12 +12,19 @@ namespace AngryGames.OutputAdapter.Repositories
     {
         public static readonly string ConnectionString = ConfigurationManager.ConnectionStrings["angry_games"].ToString();
 
-        public static List<Game> ConsultarAlumnos()
+        static MySqlConnection CreateConnection()
         {
-            using (var connection = new MySqlConnection(ConnectionString))
+            return new MySqlConnection(ConnectionString);
+        }
+
+        public static List<Game> ConsultGames()
+        {
+            using (var connection = CreateConnection())
             {
                 return connection.Query<Game>("get_all_games", commandType: CommandType.StoredProcedure).AsList();
             }
         }
+
+
     }
 }
