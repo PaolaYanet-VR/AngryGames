@@ -1,9 +1,9 @@
-.ButtonAdd {
+.ButtonEdit {
     background-color: rgb(212, 63, 63);
     border: transparent;
 }
 
-.ButtonAdd:hover {
+.ButtonEdit:hover {
     background-color: rgb(153, 47, 47);
     border: transparent;
 }
