@@ -23,7 +23,6 @@ D:\4TO SEMESTRE\DIPAE\2DO PARCIAL\PROYECTO CON GIT\AngryGames\AngryGames\AngryGa
 D:\4TO SEMESTRE\DIPAE\2DO PARCIAL\PROYECTO CON GIT\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\System.Memory.xml
 D:\4TO SEMESTRE\DIPAE\2DO PARCIAL\PROYECTO CON GIT\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\System.Numerics.Vectors.xml
 D:\4TO SEMESTRE\DIPAE\2DO PARCIAL\PROYECTO CON GIT\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-D:\4TO SEMESTRE\DIPAE\2DO PARCIAL\PROYECTO CON GIT\AngryGames\AngryGames\AngryGames.DomainModel\obj\Debug\AngryGames.DomainModel.csprojAssemblyReference.cache
 D:\4TO SEMESTRE\DIPAE\2DO PARCIAL\PROYECTO CON GIT\AngryGames\AngryGames\AngryGames.DomainModel\obj\Debug\AngryGames.DomainModel.csproj.CoreCompileInputs.cache
 D:\4TO SEMESTRE\DIPAE\2DO PARCIAL\PROYECTO CON GIT\AngryGames\AngryGames\AngryGames.DomainModel\obj\Debug\AngryGames.DomainModel.csproj.CopyComplete
 D:\4TO SEMESTRE\DIPAE\2DO PARCIAL\PROYECTO CON GIT\AngryGames\AngryGames\AngryGames.DomainModel\obj\Debug\AngryGames.DomainModel.dll
