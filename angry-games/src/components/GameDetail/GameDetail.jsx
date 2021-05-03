@@ -2,24 +2,31 @@ import React from 'react';
 import './GameDetail.css';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 //import {useDispatch, useSelector} from 'react-redux';
-import ConsultGamesRequest from '../../requests/ConsultGamesRequest';
+import GetGamesRequest from '../../requests/GetGamesRequest';
 import gameImage from '../../img/img-games/default.png';
 
-export default function GameDetail(){
+
+/*export function returnId() {
+    // obtener el id del game selected
     var URLactual = window.location.href;
+    var Aid = URLactual.split("http://localhost:3000/gameDetail/");
+    var id = Aid[1];
 
-    var id = URLactual.split("http://localhost:3000/GameDetail/");
-    const request = new ConsultGamesRequest();
+    return id;
+}*/
+
+
+export default function GameDetail(){
+
+    // obtener el id del game selected
+    var URLactual = window.location.href;
+    var Aid = URLactual.split("http://localhost:3000/gameDetail/");
+    var id = Aid[1];    
+
+    // request get game
+    const request = new GetGamesRequest();
     const games = request.execute();
-    //const games = useSelector(state => state.game);
 
-    var gameSelected;
-
-    games.forEach(element => {
-        if(element.id == id){
-            gameSelected = element;
-        }
-    });
 
     return(
         <div>

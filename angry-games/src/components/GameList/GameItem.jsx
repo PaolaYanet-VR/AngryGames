@@ -2,23 +2,16 @@ import React from 'react';
 import { Card, Col, Nav } from 'react-bootstrap';
 import './GameList.css';
 import iconDelete from '../../img/delete.png';
+import { Link } from 'react-router-dom';
 
 export default function GameItem(props){
     const game = props.game;
-    
-    const [selectedGame, setSelectedGame] = React.useState('');
-
-    function handleSelectedGameChange(event){
-        const value = event.target.value;
-        setSelectedGame(value);
-        console.log(selectedGame);
-    }
 
     return (
         <Col>
             <Card className="item">
             
-            <Nav.Link className="link"  href="gameDetail" value={game.id} onClick={handleSelectedGameChange}>    
+            <Nav.Link className="link" as={Link} to={"/gameDetail/" + game.id} value={game.id}>
             <Card.Body>
                     
                     <div className= "alinea"><img className="gameImg" height="120 rem" width="160 rem"  src={game.image}/>
