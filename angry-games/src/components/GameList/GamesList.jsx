@@ -1,6 +1,6 @@
 import React from 'react';
 import Item from './GameItem';
-import ConsultGamesRequest from '../../requests/ConsultGamesRequest';
+import ConsultGamesRequest from '../../requests/GetGamesRequest';
 import { Row } from 'react-bootstrap';
 import Carousel from './CarouselHome';
 
