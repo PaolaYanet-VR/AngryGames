@@ -116,7 +116,7 @@ namespace AngryGames.Api.Controllers
 
         [HttpPut]
         [Route("{id}")]
-        public HttpResponseMessage UpdateGame([FromUri] int id, [FromBody] GameRequest request)
+        public HttpResponseMessage UpdateGame([FromUri] int id, [FromBody] UpdateGameRequest request)
         {
             try
             {

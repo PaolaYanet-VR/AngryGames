@@ -64,16 +64,16 @@ namespace AngryGames.OutputAdapter.Repositories
             using (var connection = CreateConnection())
             {
                 var parameters = new DynamicParameters();
+                parameters.Add("_id", DbType.Int32, direction: ParameterDirection.Output);
                 parameters.Add("_title", title);
                 parameters.Add("_developer", developer);
                 parameters.Add("_image", image);
                 parameters.Add("_description", description);
-                parameters.Add("_releaseData", releaseDate);
+                parameters.Add("_releaseDate", releaseDate);
                 parameters.Add("_category", category);
-                parameters.Add("_id", DbType.Int32, direction: ParameterDirection.Output);
 
                 //CONECTA LA BASE DE DATOS
-                connection.Execute("add_game", parameters, commandType: System.Data.CommandType.StoredProcedure);
+                connection.Execute("add_game", parameters, commandType: CommandType.StoredProcedure);
 
                 var id = parameters.Get<int>("_id");
 
@@ -93,7 +93,7 @@ namespace AngryGames.OutputAdapter.Repositories
                 parameters.Add("_developer", developer);
                 parameters.Add("_image", image);
                 parameters.Add("_description", description);
-                parameters.Add("_releaseData", releaseDate);
+                parameters.Add("_releaseDate", releaseDate);
                 parameters.Add("_category", category);
 
                 //CONECTA LA BASE DE DATOS

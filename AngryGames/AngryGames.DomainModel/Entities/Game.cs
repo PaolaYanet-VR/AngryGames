@@ -10,6 +10,11 @@
         public string ReleaseDate { get; set; }
         public string Category { get; set; }
 
+        public Game()
+        {
+
+        }
+
         public Game(int id, string title, string developer, string image, string description, string releaseDate, string category)
         {
             Id = id;

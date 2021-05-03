@@ -57,3 +57,33 @@ C:\UNIVERSIDAD\4to\DIAE\AngryGames\AngryGames\AngryGames.DomainModel\obj\Debug\A
 C:\UNIVERSIDAD\4to\DIAE\AngryGames\AngryGames\AngryGames.DomainModel\obj\Debug\AngryGames.DomainModel.csproj.CopyComplete
 C:\UNIVERSIDAD\4to\DIAE\AngryGames\AngryGames\AngryGames.DomainModel\obj\Debug\AngryGames.DomainModel.dll
 C:\UNIVERSIDAD\4to\DIAE\AngryGames\AngryGames\AngryGames.DomainModel\obj\Debug\AngryGames.DomainModel.pdb
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\AngryGames.DomainModel.dll.config
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\AngryGames.DomainModel.dll
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\AngryGames.DomainModel.pdb
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\BouncyCastle.Crypto.dll
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\Google.Protobuf.dll
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\K4os.Compression.LZ4.dll
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\K4os.Hash.xxHash.dll
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\MySql.Data.dll
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\System.Buffers.dll
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\System.Memory.dll
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\System.Numerics.Vectors.dll
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\Ubiety.Dns.Core.dll
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\Zstandard.Net.dll
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\Google.Protobuf.pdb
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\Google.Protobuf.xml
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\K4os.Compression.LZ4.xml
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\K4os.Hash.xxHash.xml
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\MySql.Data.xml
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\System.Buffers.xml
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\System.Memory.xml
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\System.Numerics.Vectors.xml
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\obj\Debug\AngryGames.DomainModel.csprojAssemblyReference.cache
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\obj\Debug\AngryGames.DomainModel.csproj.CoreCompileInputs.cache
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\obj\Debug\AngryGames.DomainModel.csproj.CopyComplete
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\obj\Debug\AngryGames.DomainModel.dll
+D:\CHALLE\4to Semestre\AngryGames\AngryGames\AngryGames.DomainModel\obj\Debug\AngryGames.DomainModel.pdb
