@@ -3,9 +3,14 @@ import { Card, Col, Nav } from 'react-bootstrap';
 import './GameList.css';
 import iconDelete from '../../img/delete.png';
 import { Link } from 'react-router-dom';
+import DeleteGameRequest from '../../requests/DeleteGameRequest';
 
 export default function GameItem(props){
     const game = props.game;
+
+    function DeleteGameAction(){
+        const result = new DeleteGameRequest(game.id).send();
+    }
 
     return (
         <Col>
@@ -23,7 +28,7 @@ export default function GameItem(props){
                         </Card.Text>
                     </Card.Body>
                 </Nav.Link>    
-                <button className="button-delete"><img width="25px" src={iconDelete}/></button>
+                <button className="button-delete" onClick={DeleteGameAction}><img width="25px" src={iconDelete}/></button>
             </Card>
             <br />
         </Col>
