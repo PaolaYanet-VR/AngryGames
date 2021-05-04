@@ -1,9 +1,10 @@
 import React from 'react';
 import './GameDetail.css';
 import { Form, Button, Row, Col } from 'react-bootstrap';
-//import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import GetGamesRequest from '../../requests/GetGamesRequest';
 import gameImage from '../../img/img-games/default.png';
+import selectedGameAction from './actions/selectedGameAction';
 
 
 /*export function returnId() {
@@ -27,9 +28,17 @@ export default function GameDetail(){
     const request = new GetGamesRequest();
     const games = request.execute();
 
+    const [gameSelected, setGameSelected] = React.useState('');
+    const dispatch = useDispatch();
+
+    function handleGameSelected(){
+        const action = selectedGameAction(id);
+        dispatch(action);
+    }
+
 
     return(
-        <div>
+        <div onLoad={handleGameSelected}>
             <Form>
                 <Form.Group>
                     <br />
