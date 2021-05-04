@@ -2,7 +2,7 @@ import React from 'react';
 import './GameDetail.css';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import {useDispatch, useSelector} from 'react-redux';
-import GetGamesRequest from '../../requests/GetGamesRequest';
+import GetGameByIdRequest from '../../requests/GetGameByIdRequest';
 import gameImage from '../../img/img-games/default.png';
 import selectedGameAction from './actions/selectedGameAction';
 
@@ -18,6 +18,8 @@ import selectedGameAction from './actions/selectedGameAction';
 
 
 export default function GameDetail(){
+    const [gameSelected, setGameSelected] = React.useState('');
+    const dispatch = useDispatch();
 
     // obtener el id del game selected
     var URLactual = window.location.href;
@@ -25,17 +27,23 @@ export default function GameDetail(){
     var id = Aid[1];    
 
     // request get game
-    const request = new GetGamesRequest();
-    const games = request.execute();
-
-    const [gameSelected, setGameSelected] = React.useState('');
-    const dispatch = useDispatch();
+    async function loadGameById(){
+        const result = new GetGameByIdRequest().execute();
+        setGameSelected(result);
+        console.log(result);
+    }
 
     function handleGameSelected(){
         const action = selectedGameAction(id);
         dispatch(action);
+        
     }
 
+    React.useEffect(() => {
+        if (gameSelected === null) {
+            loadGameById();
+        }
+    });
 
     return(
         <div onLoad={handleGameSelected}>
