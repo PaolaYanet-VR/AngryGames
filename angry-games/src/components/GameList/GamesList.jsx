@@ -10,7 +10,7 @@ export default function GamesList() {
     const [games, setGames] =  React.useState(null);
 
     async function loadGames() {
-        const result = await new ConsultGamesRequest().execute();
+        const result = await new ConsultGamesRequest().send();
         setGames(result);
     }
 

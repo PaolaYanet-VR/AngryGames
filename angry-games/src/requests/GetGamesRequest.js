@@ -19,7 +19,7 @@ import ApiConfig from '../ApiConfig';
 }*/
 
 export default class GetGamesRequest {
-    async execute() {
+    async send() {
         const response = await axios.get(ApiConfig.endpoints.games.get);
         return response.data.map(game => new Game(
             game.id,
