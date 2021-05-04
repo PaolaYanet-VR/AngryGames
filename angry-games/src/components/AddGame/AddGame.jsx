@@ -3,7 +3,7 @@ import './AddGame.css';
 import React from 'react';
 import addGameAction from './actions/addGameAction';
 import { useDispatch, useSelector } from 'react-redux';
-
+import AddGameRequest from '../../requests/AddGameRequest';
 import gameImage from '../../img/img-games/default.png';
 
 export default function AddGame(){
@@ -46,6 +46,10 @@ export default function AddGame(){
         event.preventDefault();
         const action = addGameAction(titleText, developerText, imageText, descriptionText, releaseDateText, categoryText);
         dispath(action);
+
+        // add game
+        var a = new AddGameRequest(titleText, developerText, imageText, descriptionText, releaseDateText, categoryText).send();
+
         resetForm();
     }
 
@@ -54,6 +58,8 @@ export default function AddGame(){
         setDeveloper('');
         setCategory('Accioneishon');
     }
+
+
 
     return(
         <div>

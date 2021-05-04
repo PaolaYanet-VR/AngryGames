@@ -27,23 +27,23 @@ export default function GameDetail(){
     var id = Aid[1];    
 
     // request get game
-    async function loadGameById(){
-        const result = new GetGameByIdRequest().execute();
-        setGameSelected(result);
+    async function loadGameById(value){
+        const result = new GetGameByIdRequest(value).send();
+        //setGameSelected(result);
         console.log(result);
     }
 
     function handleGameSelected(){
         const action = selectedGameAction(id);
         dispatch(action);
-        
+        loadGameById(id);
     }
 
-    React.useEffect(() => {
+    /*React.useEffect(() => {
         if (gameSelected === null) {
-            loadGameById();
+            loadGameById(id);
         }
-    });
+    });*/
 
     return(
         <div onLoad={handleGameSelected}>

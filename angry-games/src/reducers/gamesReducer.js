@@ -9,8 +9,8 @@ export default function gamesReducer(gamesState = initialState, action){
                 ...gamesState,
                 action.payload
             ];
-            default:
-                return gamesState;
+        default:
+            return gamesState;
 
     }
 }

@@ -9,7 +9,7 @@ export default class ApiConfig {
                 add: gamesBasePath + 'postd/',
                 delete: gamesBasePath, //+ id
                 get: gamesBasePath,
-                getById: gamesBasePath + 'id/', //+ id
+                getById: id => gamesBasePath + 'id/' + {id}, //+ id
                 getByCategory: gamesBasePath + 'category/', //+ category
                 getByTitle: gamesBasePath + 'title/', //+ title
                 update: gamesBasePath //+ id

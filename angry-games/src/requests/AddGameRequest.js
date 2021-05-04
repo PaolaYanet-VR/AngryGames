@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Game from '../representations/Game';
+import ApiConfig from '../ApiConfig';
 
 export default class AddGameRequest {
     constructor(title, developer, image, description, releaseDate, category) {
@@ -12,10 +13,13 @@ export default class AddGameRequest {
     }
 
     async send() {
-        const response = await axios.post(ApiConfig.endpoints.todos.add, {
-            todoText: this.todoText,
-            assignedUserId: this.assignedUserId
+        const response = await axios.post(ApiConfig.endpoints.games.add, {
+            title: this.title,
+            developer: this.developer,
+            image: this.image, 
+            description: this.description,
+            releaseDate: this.releaseDate,
+            category: this.category
         });
-        return Todo.fromApiResponse(response.data);
     }
 }
