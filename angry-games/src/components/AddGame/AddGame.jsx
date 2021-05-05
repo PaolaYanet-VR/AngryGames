@@ -14,7 +14,7 @@ export default function AddGame(){
     const [releaseDateText, setDate] = React.useState('');
     const [categoryText, setCategory] = React.useState('');
 
-    const dispath = useDispatch();
+    const dispatch = useDispatch();
 
     // setters
     function handleTitleTextChange(event){
@@ -45,7 +45,7 @@ export default function AddGame(){
     function handleFormSubmittion(event){
         event.preventDefault();
         const action = addGameAction(titleText, developerText, imageText, descriptionText, releaseDateText, categoryText);
-        dispath(action);
+        dispatch(action);
 
         // add game
         var a = new AddGameRequest(titleText, developerText, imageText, descriptionText, releaseDateText, categoryText).send();
@@ -68,9 +68,9 @@ export default function AddGame(){
                     <br />
                     <Row>
                         <Col>
-                            <div className="inline-svg"><img className="gameImage" src={gameImage}></img></div>
+                            <div className="inline-svg"><img className="gameImage" alt={gameImage}></img></div>
                             <br />
-                            <Form.File onChange={handleImageTextChange}  className="neon" label="Select Image" />
+                            <Form.File onChange={handleImageTextChange} className="neon" label="Select Image" />
                             <br />
                             <Form.Label className="neon">Description</Form.Label>
                             <br />

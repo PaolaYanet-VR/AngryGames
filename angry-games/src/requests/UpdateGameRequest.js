@@ -11,10 +11,12 @@ export default class UpdateGameRequest {
         this.description = description;
         this.releaseDate = releaseDate;
         this.category = category;
+        const URLget = 'https://localhost:44370/api/games/' + id;
+        this.URLget = URLget;
     }
 
     async send() {
-        const response = await axios.put(ApiConfig.endpoints.games.add + this.id, {
+        const response = await axios.put(this.URLget, {
             id: this.id,
             title: this.title,
             developer: this.developer,

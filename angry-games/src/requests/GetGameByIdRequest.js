@@ -26,12 +26,24 @@ import Game from '../representations/Game';
 export default class GetGameByIdRequest {
     constructor(idGame) {
         this.idGame = idGame;
+        const URLget = 'https://localhost:44370/api/games/id/' + idGame;
+        this.URLget = URLget;
     }
 
     async send() {
-        console.log(this.idGame);
-        const response = await axios.get(ApiConfig.endpoints.games.getById, this.idGame);
-        const gameResponse = Game.fromApiResponse(response.data);
-        return gameResponse;
+        //console.log(this.URLget);
+        //const response = await axios.get(ApiConfig.endpoints.games.getById, this.idGame);
+        let response = await axios.get(this.URLget);
+        //const gameResponse = Game.fromApiResponse(response.data);
+        return new Game(
+            response.data.id,
+            response.data.title,
+            response.data.developer,
+            response.data.image,
+            response.data.description,
+            response.data.releaseDate,
+            response.data.category
+        );
+        //return gameResponse;
     }
 }
