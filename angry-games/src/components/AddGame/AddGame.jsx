@@ -68,9 +68,9 @@ export default function AddGame(){
                     <br />
                     <Row>
                         <Col>
-                            <div className="inline-svg"><img className="gameImage" alt={gameImage}></img></div>
+                            <div className="inline-svg"><img className="gameImage" src={gameImage}></img></div>
                             <br />
-                            <Form.File onChange={handleImageTextChange} className="neon" label="Select Image" />
+                            <Form.Control className="Input-txt" placeholder="image URL" value={imageText} onChange={handleImageTextChange}/>
                             <br />
                             <Form.Label className="neon">Description</Form.Label>
                             <br />

@@ -6,6 +6,7 @@ import GetGameByIdRequest from '../../requests/GetGameByIdRequest';
 import UpdateGameRequest from '../../requests/UpdateGameRequest';
 import gameImage from '../../img/img-games/default.png';
 import selectedGameAction from './actions/selectedGameAction';
+import axios from 'axios';
 
 
 /*export function returnId() {
@@ -50,16 +51,11 @@ export default function GameDetail(){
     }
 
     function handleImageTextChange(event){
-        //imageBase64();
-        setGameImage(event.target.value);
+        setImage(event.target.value);
+        
     }
 
-    function setGameImage(event){
-        // set Image
-        setImage('asereje');
-    }
-
-    function imageBase64(){
+    /*function imageBase64(){
         const preview = document.getElementById('GAME_IMAGE');
         const file = document.querySelector('input[type=file]').files[0];
         const reader = new FileReader();
@@ -73,7 +69,7 @@ export default function GameDetail(){
         if (file) {
             reader.readAsDataURL(file);
         }
-    }
+    }*/
 
     // obtener el id del game selected
     var URLactual = window.location.href;
@@ -112,6 +108,10 @@ export default function GameDetail(){
         new UpdateGameRequest(id, titleText, developerText, imageText, descriptionText, releaseDateText, categoryText).send();
     }
 
+    function handleImageUpload(){
+        //axios.post('')
+    }
+
     /*React.useEffect(() => {
         if (gameSelected === null) {
             loadGameById(id);
@@ -127,7 +127,7 @@ export default function GameDetail(){
                         <Col>
                             <div className="inline-svg"><img id='GAME_IMAGE' className="gameImage" src={gameImage}></img></div>
                             <br />
-                            <Form.File className="neon" label="" onChange={handleImageTextChange}/>
+                            <Form.Control className="Input-txt" placeholder="image URL" value={imageText} onChange={handleImageTextChange}/>
                             <br />
                             <Form.Label className="neon">Description</Form.Label>
                             <br />
