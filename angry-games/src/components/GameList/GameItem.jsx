@@ -10,6 +10,7 @@ export default function GameItem(props){
 
     function DeleteGameAction(){
         const result = new DeleteGameRequest(game.id).send();
+        window.location.reload();
     }
 
     return (

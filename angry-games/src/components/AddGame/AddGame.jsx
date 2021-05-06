@@ -51,12 +51,14 @@ export default function AddGame(){
         var a = new AddGameRequest(titleText, developerText, imageText, descriptionText, releaseDateText, categoryText).send();
 
         resetForm();
+        window.location.href = "http://localhost:3000/home";
+        
     }
 
     function resetForm(){
         setTitle('');
         setDeveloper('');
-        setCategory('Accioneishon');
+        setCategory('Action');
     }
 
 
@@ -96,7 +98,14 @@ export default function AddGame(){
                             <br />
                             <Form.Label  className="neon">Category</Form.Label>
                             <Form.Control onChange={handleCategoryTextChange} className="Input-txt" as="select">
-                                <option>Default select</option>
+                                <option>Action</option>
+                                <option>Adventure</option>
+                                <option>Casual</option>
+                                <option>Racing</option>
+                                <option>RPG</option>
+                                <option>Simulation</option>
+                                <option>Sports</option>
+                                <option>Strategy</option>
                             </Form.Control>
                             <br />
                             <Button className="ButtonAdd" type="submit">

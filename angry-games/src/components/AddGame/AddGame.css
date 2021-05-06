@@ -1,10 +1,11 @@
 .ButtonAdd {
-    background-color: rgb(212, 63, 63);
+    background-color: rgb(154, 65, 206);
     border: transparent;
+    width: 50rem;
 }
 
 .ButtonAdd:hover {
-    background-color: rgb(153, 47, 47);
+    background-color: rgb(113, 46, 151);
     border: transparent;
 }
 

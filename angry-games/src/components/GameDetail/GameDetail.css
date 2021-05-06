@@ -1,10 +1,22 @@
 .ButtonEdit {
-    background-color: rgb(212, 63, 63);
+    background-color: rgb(154, 65, 206);
+    border: transparent;
+    width: 50rem;
+}
+
+.ButtonDelete {
+    background-color: rgb(141, 43, 43);
+    border: transparent;
+    width: 19.21rem;
+}
+
+.ButtonDelete:hover {
+    background-color: rgb(104, 33, 33);
     border: transparent;
 }
 
 .ButtonEdit:hover {
-    background-color: rgb(153, 47, 47);
+    background-color: rgb(113, 46, 151);
     border: transparent;
 }
 

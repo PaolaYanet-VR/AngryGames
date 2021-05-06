@@ -4,8 +4,11 @@ import { Form, Button, Row, Col } from 'react-bootstrap';
 import {useDispatch, useSelector} from 'react-redux';
 import GetGameByIdRequest from '../../requests/GetGameByIdRequest';
 import UpdateGameRequest from '../../requests/UpdateGameRequest';
+import DeleteGameRequest from '../../requests/DeleteGameRequest';
+import iconDelete from '../../img/delete.png';
 import gameImage from '../../img/img-games/default.png';
 import selectedGameAction from './actions/selectedGameAction';
+import '../GameList/GameList.css';
 import axios from 'axios';
 
 
@@ -52,7 +55,6 @@ export default function GameDetail(){
 
     function handleImageTextChange(event){
         setImage(event.target.value);
-        
     }
 
     /*function imageBase64(){
@@ -98,6 +100,7 @@ export default function GameDetail(){
                 setDescription(value.description);
                 setDate(value.releaseDate);
                 setCategory(value.category);
+                
             },
             function(error) { console.log(error); }
         );
@@ -112,6 +115,26 @@ export default function GameDetail(){
         //axios.post('')
     }
 
+
+    function definirUrl(value){
+        var url="";
+        if(value == null || value==""){
+            url = "https://tse3.mm.bing.net/th?id=OIP.Bxx34opF6SddzxTBpMh2tgHaDF&pid=Api";
+        }else{
+            url = value;
+        }
+
+        return url;
+    }
+
+    function DeleteGameAction(){
+        const result = new DeleteGameRequest(id).send();
+        window.location.replace("http://localhost:3000/home");
+    }
+
+    function changePage(){
+        window.location.href = "http://localhost:3000/home";
+    }
     /*React.useEffect(() => {
         if (gameSelected === null) {
             loadGameById(id);
@@ -122,12 +145,12 @@ export default function GameDetail(){
         <div onLoad={handleGameSelected}>
             <Form onSubmit={handleFormSubmittion}>
                 <Form.Group>
-                    <br />
+                    <br /> 
                     <Row>
                         <Col>
-                            <div className="inline-svg"><img id='GAME_IMAGE' className="gameImage" src={gameImage}></img></div>
+                            <div className="inline-svg"><img id='GAME_IMAGE' className="gameImage" src={definirUrl(imageText)}></img></div>
                             <br />
-                            <Form.Control className="Input-txt" placeholder="image URL" value={imageText} onChange={handleImageTextChange}/>
+                            <Form.Control className="Input-txt" placeholder="image URL" value={imageText} onPaste={handleImageTextChange}/>
                             <br />
                             <Form.Label className="neon">Description</Form.Label>
                             <br />
@@ -150,23 +173,31 @@ export default function GameDetail(){
                             <br />
                             <Form.Label  className="neon">Relase Date</Form.Label>
                             <br />
-                            <Form.Control className="Input-txt" type="date" name='date_of_birth' value={releaseDateText} onChange={handleReleaseDateTextChange}/>
+                            <Form.Control className="Input-txt" type="date" value={releaseDateText} onChange={handleReleaseDateTextChange}/>
                             <br />
                             <Form.Label  className="neon">Category</Form.Label>
                             <Form.Control className="Input-txt" as="select" value={categoryText} onChange={handleCategoryTextChange}>
-                                <option>h</option>
-                                <option>A</option>
-                                <option>a</option>
-                                <option>e</option>
+                                <option>Action</option>
+                                <option>Adventure</option>
+                                <option>Casual</option>
+                                <option>Racing</option>
+                                <option>RPG</option>
+                                <option>Simulation</option>
+                                <option>Sports</option>
+                                <option>Strategy</option>
                             </Form.Control>
                             <br />
-                            <Button className="ButtonEdit" type="submit">
-                                Edit Game
-                            </Button>
+                            <Row>
+                                <Col>
+                                    <Button className="ButtonEdit" type="submit">Edit Game</Button>
+                                </Col>
+                            </Row>
+                            
                         </Col>
                     </Row>
                 </Form.Group>
             </Form>
+            <Button className="ButtonDelete" onClick={DeleteGameAction}><img width="25px" src={iconDelete}/>Delete Game</Button>
         </div>
     );
 }
