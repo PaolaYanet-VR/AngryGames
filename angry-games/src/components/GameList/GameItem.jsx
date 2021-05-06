@@ -20,12 +20,12 @@ export default function GameItem(props){
                     <Card.Body>
                         <div className= "alinea"><img className="gameImg" height="120 rem" width="160 rem"  src={game.image}/>
                         </div><br />
-                        <Card.Title>{game.title}</Card.Title>
+                        <Card.Title><h3 className="negritas">{game.title}</h3></Card.Title>
                         <Card.Text>
-                        Category: {game.category}<br />
-                        {game.description} <br />
-                        Developer: {game.developer}<br />
-                        Release date: {game.releaseDate}
+                        {game.description} <br /> <br />
+                        <label className="negritas">Category:</label> {game.category}<br />
+                        <label className="negritas">Developer:</label> {game.developer}<br />
+                        <label className="negritas">Release date:</label> {game.releaseDate}
                         </Card.Text>
                     </Card.Body>
                 </Nav.Link>    
