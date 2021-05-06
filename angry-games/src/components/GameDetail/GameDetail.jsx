@@ -1,25 +1,14 @@
 import React from 'react';
 import './GameDetail.css';
 import { Form, Button, Row, Col } from 'react-bootstrap';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import GetGameByIdRequest from '../../requests/GetGameByIdRequest';
 import UpdateGameRequest from '../../requests/UpdateGameRequest';
 import DeleteGameRequest from '../../requests/DeleteGameRequest';
 import iconDelete from '../../img/delete.png';
-import gameImage from '../../img/img-games/default.png';
 import selectedGameAction from './actions/selectedGameAction';
 import '../GameList/GameList.css';
-import axios from 'axios';
-
-
-/*export function returnId() {
-    // obtener el id del game selected
-    var URLactual = window.location.href;
-    var Aid = URLactual.split("http://localhost:3000/gameDetail/");
-    var id = Aid[1];
-
-    return id;
-}*/
+import Swal from 'sweetalert2';
 
 
 export default function GameDetail(){
@@ -29,6 +18,8 @@ export default function GameDetail(){
     const [descriptionText, setDescription] = React.useState('');
     const [releaseDateText, setDate] = React.useState('');
     const [categoryText, setCategory] = React.useState('');
+
+    var flag = false;
 
     const dispatch = useDispatch();
 
@@ -57,33 +48,12 @@ export default function GameDetail(){
         setImage(event.target.value);
     }
 
-    /*function imageBase64(){
-        const preview = document.getElementById('GAME_IMAGE');
-        const file = document.querySelector('input[type=file]').files[0];
-        const reader = new FileReader();
-
-        reader.addEventListener("load", function () {
-            // convert image file to base64 string
-            preview.src = reader.result;
-            
-        }, false);
-
-        if (file) {
-            reader.readAsDataURL(file);
-        }
-    }*/
 
     // obtener el id del game selected
     var URLactual = window.location.href;
     var Aid = URLactual.split("http://localhost:3000/gameDetail/");
     var id = Aid[1];    
 
-    // request get game
-    /*async function loadGameById(value){
-        //const result = new GetGameByIdRequest(value).send();
-        //setGameSelected(result);
-        //console.log(gameSelected);
-    }*/
 
     function handleGameSelected(){
         const result = new GetGameByIdRequest(id).send();
@@ -100,20 +70,29 @@ export default function GameDetail(){
                 setDescription(value.description);
                 setDate(value.releaseDate);
                 setCategory(value.category);
-                
+                flag = true;
             },
             function(error) { console.log(error); }
         );
+        
+        
     }
 
     // editar
     function handleFormSubmittion(){
         new UpdateGameRequest(id, titleText, developerText, imageText, descriptionText, releaseDateText, categoryText).send();
+        if(flag){
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                showConfirmButton: false,
+                timer: 3000
+              })
+        }
+          //window.location.href = "http://localhost:3000/home";   
     }
 
-    function handleImageUpload(){
-        //axios.post('')
-    }
+    
 
 
     function definirUrl(value){
@@ -128,7 +107,45 @@ export default function GameDetail(){
     }
 
     function DeleteGameAction(){
-        const result = new DeleteGameRequest(id).send();
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: 'btn btn-success',
+              cancelButton: 'btn btn-danger'
+            },
+            buttonsStyling: false
+          })
+
+          swalWithBootstrapButtons.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'No, cancel!',
+            reverseButtons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+                swalWithBootstrapButtons.fire(
+                    'Deleted!',
+                    'Your game has been deleted.',
+                    'success'
+                )
+                const result = new DeleteGameRequest(id).send();
+                setTimeout(Home, 2000)
+            } else if (
+              /* Read more about handling dismissals below */
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+              swalWithBootstrapButtons.fire(
+                'Cancelled',
+                'Your imaginary file is safe :)',
+                'error'
+              )
+            }
+          })
+    }
+
+    function Home(){
         window.location.replace("http://localhost:3000/home");
     }
 
@@ -150,8 +167,7 @@ export default function GameDetail(){
                         <Col>
                             <div className="inline-svg"><img id='GAME_IMAGE' className="gameImage" src={definirUrl(imageText)}></img></div>
                             <br />
-                            <Form.Control className="Input-txt" placeholder="image URL" value={imageText} onPaste={handleImageTextChange}/>
-                            <br />
+                            
                             <Form.Label className="neon">Description</Form.Label>
                             <br />
                             <textarea 

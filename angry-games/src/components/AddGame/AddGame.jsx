@@ -5,6 +5,7 @@ import addGameAction from './actions/addGameAction';
 import { useDispatch, useSelector } from 'react-redux';
 import AddGameRequest from '../../requests/AddGameRequest';
 import gameImage from '../../img/img-games/default.png';
+import Swal from 'sweetalert2'
 
 export default function AddGame(){
     const [titleText, setTitle] = React.useState('');
@@ -44,15 +45,39 @@ export default function AddGame(){
     // handlers
     function handleFormSubmittion(event){
         event.preventDefault();
-        const action = addGameAction(titleText, developerText, imageText, descriptionText, releaseDateText, categoryText);
-        dispatch(action);
-
-        // add game
-        var a = new AddGameRequest(titleText, developerText, imageText, descriptionText, releaseDateText, categoryText).send();
-
-        resetForm();
-        window.location.href = "http://localhost:3000/home";
-        
+        if(titleText == '' || developerText == '' || imageText == '' || descriptionText == '' || categoryText == '' || releaseDateText == ''){
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'You need to fill all the fields!'
+              })
+        }
+        else{
+            const action = addGameAction(titleText, developerText, imageText, descriptionText, releaseDateText, categoryText);
+            dispatch(action);
+    
+            // add game
+            var a = new AddGameRequest(titleText, developerText, imageText, descriptionText, releaseDateText, categoryText).send();
+    
+            resetForm();
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                  toast.addEventListener('mouseenter', Swal.stopTimer)
+                  toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+              })
+              
+              Toast.fire({
+                icon: 'success',
+                title: 'Game added'
+              })
+            window.location.href = "http://localhost:3000/home";
+        }
     }
 
     function resetForm(){
