@@ -4,6 +4,7 @@
     color: white;
     padding: 5pt;
     width: 22rem;
+    height: 30rem;
     padding-left: 25px;
     padding-right: 10px;
     padding-bottom: 10px;
@@ -15,7 +16,9 @@
 }
 
 .gameImg {
-    border-radius: 5pt;
+    border-radius: 3pt;
+    width: 12rem;
+    height: 8rem;
 }
 
 .alinea{

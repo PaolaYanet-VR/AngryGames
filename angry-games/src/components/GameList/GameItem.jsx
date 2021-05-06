@@ -14,7 +14,7 @@ export default function GameItem(props){
     }
 
     return (
-        <Col>
+        <Col className="col-4">
             <Card className="item">
                 <Nav.Link className="link" as={Link} to={"/gameDetail/" + game.id} value={game.id}>
                     <Card.Body>
@@ -29,7 +29,6 @@ export default function GameItem(props){
                         </Card.Text>
                     </Card.Body>
                 </Nav.Link>    
-                <button className="button-delete" onClick={DeleteGameAction}><img width="25px" src={iconDelete}/></button>
             </Card>
             <br />
         </Col>
